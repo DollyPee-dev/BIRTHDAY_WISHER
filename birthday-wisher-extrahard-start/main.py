@@ -3,14 +3,15 @@ from smtplib import *
 import pandas as pd
 import datetime as dt
 import random
+import os
 
 #  Check if today matches a birthday in the birthdays.csv
 
 data = pd.read_csv("birthdays.csv")
 now = dt.datetime.now()
 
-my_email = "precimyte1122@gmail.com"
-my_password = "yhqgozusitvdyhti"
+my_email = os.environ.get("EMAIL")
+my_password = os.environ.get("PASSWORD")
 
 today_matches = data[
     (data["month"] == now.month) & (data["day"] == now.day)
