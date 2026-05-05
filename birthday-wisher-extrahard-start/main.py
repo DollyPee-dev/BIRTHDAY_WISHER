@@ -7,7 +7,7 @@ import os
 
 #  Check if today matches a birthday in the birthdays.csv
 
-data = pd.read_csv("birthdays.csv")
+data = pd.read_csv("birthday-wisher-extrahard-start/birthdays.csv")
 now = dt.datetime.now()
 
 my_email = os.environ.get("EMAIL")
@@ -27,7 +27,7 @@ if today_matches:
             name = person["name"]
             email = person["email"]
 
-            birthday_text = f"letter_templates/letter_{random.randint(1,5)}.txt"
+            birthday_text = f"birthday-wisher-extrahard-start/letter_templates/letter_{random.randint(1,5)}.txt"
 
     #
 # 3. If step 2 is true, pick a random letter from letter templates and replace the [NAME] with the person's actual name from birthdays.csv
