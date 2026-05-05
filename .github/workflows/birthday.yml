@@ -25,4 +25,4 @@ jobs:
         env:
           EMAIL: ${{ secrets.EMAIL }}
           PASSWORD: ${{ secrets.PASSWORD }}
-        run: python main.py
+        run: python birthday-wisher-extrahard-start/main.py
